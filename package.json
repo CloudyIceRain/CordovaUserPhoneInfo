@@ -1,0 +1,25 @@
+{
+  "name": "user_phone_info",
+  "version": "1.0.0",
+  "description": "get info of user phone",
+  "cordova": {
+    "id": "user_phone_info",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudyIceRain/CordovaUserPhoneInfo.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "cloudy icerain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CloudyIceRain/CordovaUserPhoneInfo/issues"
+  },
+  "homepage": "https://github.com/CloudyIceRain/CordovaUserPhoneInfo#readme"
+}
