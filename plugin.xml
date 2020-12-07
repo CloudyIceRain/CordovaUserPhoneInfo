@@ -9,7 +9,7 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="userPhoneInfo">
-                <param name="android-package" value="com.cordova.plugin.userPhoneInfo" onload="true" />
+                <param name="android-package" value="com.cordova.plugin.userPhoneInfo.userPhoneInfo" onload="true" />
             </feature>
         </config-file>
 

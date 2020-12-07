@@ -1,6 +1,6 @@
 var exec = require('cordova/exec');
 
-let plugin_utils = {
+let userPhoneInfo = {
   getAllContacts(arg0, success, error){
     exec(success, error, 'userPhoneInfo', 'getAllContacts', [arg0]);
   },
@@ -23,4 +23,4 @@ let plugin_utils = {
   
 }
 
-module.exports = plugin_utils;
+module.exports = userPhoneInfo;

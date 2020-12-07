@@ -1,59 +1,30 @@
-package com.cordova.plugin.utils;
+package com.cordova.plugin.userPhoneInfo;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.Service;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.ExifInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.Build;
-import android.os.Environment;
-import android.os.StatFs;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.util.DisplayMetrics;
 import android.util.Log;
-
-import androidx.core.app.ActivityCompat;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PermissionHelper;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.lang.reflect.Method;
-import java.net.Inet4Address;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.UUID;
 
-
-public class pluginUtils extends CordovaPlugin {
+public class userPhoneInfo extends CordovaPlugin {
     /////---------------------------------------------------------------------------
     //获取联系人列表
     //index 为第几页，一次只返回100个，多的在下一页，避免信息过长，导致String放不下
