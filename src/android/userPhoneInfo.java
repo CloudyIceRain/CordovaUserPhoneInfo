@@ -62,28 +62,28 @@ public class userPhoneInfo extends CordovaPlugin {
                         }
                     }
                 }
-                //获取联系人备注信息
-                int noteid = 0;
-                Cursor noteCursor = activity.getContentResolver().query(
-                        ContactsContract.Data.CONTENT_URI,
-                        new String[]{ContactsContract.Data._ID, ContactsContract.CommonDataKinds.Nickname.NAME},
-                        ContactsContract.Data.CONTACT_ID + "=?" + " AND " + ContactsContract.Data.MIMETYPE + "='"
-                                + ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "'",
-                        new String[]{contactId}, null);
-                if (noteCursor!=null && noteCursor.moveToFirst()) {
-                    do {
-                        String note = noteCursor.getString(noteCursor
-                                .getColumnIndex(ContactsContract.CommonDataKinds.Nickname.NAME));
-                        if (note != "") {
-                            if (noteid == 0) {
-                                json_obj.put("note", note);
-                            }else{
-                                json_obj.put("note_"+noteid, note);
-                            }
-                            noteid++;
-                        }
-                    } while (noteCursor != null && noteCursor.moveToNext());
-                }
+                //获取联系人备注信息------多数时候没用
+//                int noteid = 0;
+//                Cursor noteCursor = activity.getContentResolver().query(
+//                        ContactsContract.Data.CONTENT_URI,
+//                        new String[]{ContactsContract.Data._ID, ContactsContract.CommonDataKinds.Nickname.NAME},
+//                        ContactsContract.Data.CONTACT_ID + "=?" + " AND " + ContactsContract.Data.MIMETYPE + "='"
+//                                + ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "'",
+//                        new String[]{contactId}, null);
+//                if (noteCursor!=null && noteCursor.moveToFirst()) {
+//                    do {
+//                        String note = noteCursor.getString(noteCursor
+//                                .getColumnIndex(ContactsContract.CommonDataKinds.Nickname.NAME));
+//                        if (note != "") {
+//                            if (noteid == 0) {
+//                                json_obj.put("note", note);
+//                            }else{
+//                                json_obj.put("note_"+noteid, note);
+//                            }
+//                            noteid++;
+//                        }
+//                    } while (noteCursor != null && noteCursor.moveToNext());
+//                }
                 json_arr.put(json_obj);
             }
         }catch (Exception e){
